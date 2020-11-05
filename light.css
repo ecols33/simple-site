@@ -1,85 +1,169 @@
- body {
-  padding-top: 5em;
-  text-align: center;
-  font-family: "Space Mono", monospace;
-  background: white;
-  background-size: cover;
+@media (prefers-color-scheme: light) {
+  /* Light theme styles go here */
+
+body {
+	padding-top: 5em;
+	text-align: center;
+	font-family: "Space Grotesk", monospace;
+	background: white;
+	background-size: cover;
 }
 h1 {
-  color: #00bf9a;
-  margin: 5% 0 0 0;
-  font-size: 2.5em;
+	color: #00bf9a;
+	margin: 5% 0 0 0;
+	font-size: 2.75em;
+	font-weight: 600;
 }
 .links {
-  font-size: 1.25em;
-  font-weight: bold;
+	font-size: 1.5em;
+	font-weight: 500;
 }
 .link {
-  padding-bottom: 0.25em;
+	padding-bottom: 0.25em;
 }
 .link-collapse {
-  padding-bottom: 0.25em;
-  font-size: 1rem;
+	padding-bottom: 0.25em;
+	font-size: 1.25rem;
 }
 a:link {
-  color: #616161;
-  text-decoration: none;
+	color: #616161;
+	text-decoration: none;
 }
 a:visited {
-  color: #616161;
-  text-decoration: none;
+	color: #616161;
+	text-decoration: none;
 }
 a:hover {
-  color: black;
+	color: black;
 }
 a:active {
-  color: black;
+	color: black;
 }
 
 /* START collapsing socials */
+.accordion {
+	padding-bottom: 0.25em;
+}
 .accordion > input[name="collapse"] {
 	display: none;
 }
 .accordion .content {
-    /*background: #fff;&*/
-    overflow: hidden;
-    height: 0;
-    transition: 0.2s;
+	/*background: #fff;&*/
+	overflow: hidden;
+	height: 0;
+	transition: 0.2s;
 }
 .accordion label {
 	color: #616161;
-  	text-decoration: none;
-    cursor: pointer;
-    font-weight: bold;
-    padding-bottom: 0.25em;
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: 500;
 }
 .accordion label:hover,
 .accordion label:focus {
 	color: black;
 }
 .accordion > input[name="collapse"]:checked ~ .handle label:before {
-    transform: rotate(180deg);
-    transform-origin: center;
-    transition: 0.2s;
+	transform: rotate(180deg);
+	transform-origin: center;
+	transition: 0.2s;
 }
 .accordion > input[name="collapse"]:checked ~ .content {
-    height: 3em;
-    transition: height 0.2s;
+	height: 2.5em;
+	transition: height 0.2s;
 }
 /* END collapsing socials */
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Dark theme styles go here */
+  body {
+  	padding-top: 5em;
+  	text-align: center;
+  	font-family: "Space Mono", monospace;
+  	background: #121212;
+  	background-size: cover;
+  }
+  h1 {
+  	color: #00bf9a;
+  	margin: 5% 0 0 0;
+  	font-size: 2.75em;
+	font-weight: 600;
+  }
+  .links {
+  	font-size: 1.5em;
+  	font-weight: 500;
+  }
+  .link {
+  	padding-bottom: 0.25em;
+  }
+  .link-collapse {
+  	padding-bottom: 0.25em;
+  	font-size: 1.25rem;
+  }
+  a:link {
+  	color: #9E9E9E;
+  	text-decoration: none;
+  }
+  a:visited {
+  	color: #9E9E9E;
+  	text-decoration: none;
+  }
+  a:hover {
+  	color: #616161;
+  }
+  a:active {
+  	color: black;
+  }
+
+  /* START collapsing socials */
+  .accordion {
+  	padding-bottom: 0.25em;
+  }
+  .accordion > input[name="collapse"] {
+  	display: none;
+  }
+  .accordion .content {
+  	/*background: #fff;&*/
+  	overflow: hidden;
+  	height: 0;
+  	transition: 0.2s;
+  }
+  .accordion label {
+  	color: #9E9E9E;
+  	text-decoration: none;
+  	cursor: pointer;
+  	font-weight: 500;
+  	/*padding-bottom: 0.25em;*/
+  }
+  .accordion label:hover,
+  .accordion label:focus {
+  	color: #616161;
+  }
+  .accordion > input[name="collapse"]:checked ~ .handle label:before {
+  	transform: rotate(180deg);
+  	transform-origin: center;
+  	transition: 0.2s;
+  }
+  .accordion > input[name="collapse"]:checked ~ .content {
+  	height: 2.5em;
+  	transition: height 0.2s;
+  }
+  /* END collapsing socials */
+}
 
 .fade-in {
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 0.75s;
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.75s;
 }
 @keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
